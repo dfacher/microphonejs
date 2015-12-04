@@ -66,7 +66,7 @@ _.extend(HTML5Audio.prototype, {
     
     // disable microphone entirely
     disable: function() {
-        if( this.mediaStream ) this.mediaStream.stop();
+        if( this.mediaStream ) this.mediaStream.getTracks()[0].stop();
     },
 
     // mutes the Audio Input
